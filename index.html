@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Screen Comparison</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>iPhone Screen Comparison</h1>
+            <p>Compare up to 3 iPhone models visually and numerically</p>
+        </header>
+
+        <section class="selection-area">
+            <div class="dropdown-container">
+                <div class="dropdown-wrapper">
+                    <label for="phone1">Phone 1</label>
+                    <select id="phone1" class="phone-select" data-index="0">
+                        <option value="">None</option>
+                    </select>
+                    <div class="color-indicator blue"></div>
+                </div>
+                <div class="dropdown-wrapper">
+                    <label for="phone2">Phone 2</label>
+                    <select id="phone2" class="phone-select" data-index="1">
+                        <option value="">None</option>
+                    </select>
+                    <div class="color-indicator green"></div>
+                </div>
+                <div class="dropdown-wrapper">
+                    <label for="phone3">Phone 3</label>
+                    <select id="phone3" class="phone-select" data-index="2">
+                        <option value="">None</option>
+                    </select>
+                    <div class="color-indicator orange"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="visual-comparison">
+            <div class="visual-header">
+                <h2>Visual Size Comparison</h2>
+                <label class="toggle-label">
+                    <input type="checkbox" id="showBezels" checked>
+                    <span class="toggle-text">Show Bezels</span>
+                </label>
+            </div>
+            <div class="comparison-container" id="comparisonContainer">
+                <div class="no-selection">Select iPhone models to compare</div>
+            </div>
+            <div class="legend">
+                <span class="legend-item"><span class="legend-box outer"></span> Phone Body</span>
+                <span class="legend-item"><span class="legend-box inner"></span> Screen Area</span>
+            </div>
+        </section>
+
+        <section class="data-comparison">
+            <h2>Specifications Comparison</h2>
+            <table id="comparisonTable">
+                <thead>
+                    <tr>
+                        <th>Specification</th>
+                        <th id="header1" class="phone-header blue-header">Phone 1</th>
+                        <th id="header2" class="phone-header green-header">Phone 2</th>
+                        <th id="header3" class="phone-header orange-header">Phone 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dimensions (H × W × D)</td>
+                        <td id="dims1">-</td>
+                        <td id="dims2">-</td>
+                        <td id="dims3">-</td>
+                    </tr>
+                    <tr>
+                        <td>Body Diagonal</td>
+                        <td id="bodyDiag1">-</td>
+                        <td id="bodyDiag2">-</td>
+                        <td id="bodyDiag3">-</td>
+                    </tr>
+                    <tr>
+                        <td>Display Diagonal</td>
+                        <td id="screenDiag1">-</td>
+                        <td id="screenDiag2">-</td>
+                        <td id="screenDiag3">-</td>
+                    </tr>
+                    <tr>
+                        <td>Screen-to-Body Ratio</td>
+                        <td id="ratio1">-</td>
+                        <td id="ratio2">-</td>
+                        <td id="ratio3">-</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
